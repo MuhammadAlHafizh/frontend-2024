@@ -1,10 +1,9 @@
-import Button from "../../components/Button/Button";
-
+// import Button from "../../components/Button/Button";
+import Navbar from "../../components/Navbar/Navbar";
 function HomePage() {
   return (
     <div>
-      <h2>Home Page</h2>
-      <Button title="Button Component" />
+        <Navbar/>
     </div>
   );
 }
