@@ -1,33 +1,55 @@
-.container {
+/* Small Screen */
+.navbar__container {
     background-color: #06D6A0;
-    color:#ffff;
-    padding: 1rem 5rem;
-    font-family: "Poppins", sans-serif;
-}
+    padding: 2rem;
+    color: #fff;
+    padding-right: 20%;
+    padding-left: 6%;
+  }
 
-.navbar {
+  .navbar__section {
     display: flex;
     flex-direction: column;
   }
 
   .navbar__brand {
     font-size: 2.4rem;
-    margin-bottom: 1rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin-bottom:0;
+    cursor: pointer;
   }
 
   .navbar__list {
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding-top:1rem;
+  }
+
+  .navbar__right{
+    display: flex;
+  }
+  .navbar__right_hide{
+    display: none;
+  }
+
+  .navbar__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .navbar__item {
     margin-bottom: 1rem;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 400;
   }
 
   /* Medium Screen */
   @media (min-width: 768px) {
-    .navbar {
+    .navbar__section {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -46,10 +68,6 @@
     }
   }
 
-  /* Large Screen */
   @media (min-width: 992px) {
-    /*
-     * Nothing TODO HERE.
-     * We haven't styling Navbar.
-     */
+
   }

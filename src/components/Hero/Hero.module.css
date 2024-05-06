@@ -1,0 +1,78 @@
+/* Small Screen */
+.hero__container {
+    padding: 5rem 1rem;
+    background-color: #FFFF;
+}
+
+.hero__section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero__left {
+    margin-bottom: 1rem;
+}
+
+.hero__title {
+    color: #1abc9c;
+    margin-bottom: 1rem;
+    font-size: 2.44rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.hero__monitoring {
+    color: #118AB2;
+    margin-bottom: 1rem;
+    font-size: 1.59rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.hero__description {
+    color: #64748b;
+    margin-bottom: 1rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.hero__button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #1abc9c;
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.hero__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* Medium Screen */
+@media(min-width: 768px){
+
+}
+
+/* Large Screen */
+@media(min-width: 992px) {
+    .hero__container {
+        padding: 3rem 5rem;
+        margin-bottom: fixed;
+    }
+    .hero__section {
+        margin: 0 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    .hero__left {
+        flex-basis: 40%;
+    }
+    .hero__right {
+        flex-basis: 50%;
+    }
+
+}
