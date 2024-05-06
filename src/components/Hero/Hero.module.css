@@ -1,6 +1,6 @@
 /* Small Screen */
 .hero__container {
-    padding: 5rem 1rem;
+    padding: 8rem 1rem;
     background-color: #FFFF;
 }
 
@@ -58,7 +58,7 @@
 /* Large Screen */
 @media(min-width: 992px) {
     .hero__container {
-        padding: 3rem 5rem;
+        padding: 8rem 5rem;
         margin-bottom: fixed;
     }
     .hero__section {

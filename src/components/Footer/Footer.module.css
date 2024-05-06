@@ -1,0 +1,56 @@
+/* Small Screen */
+.footer__container {
+    background-color: #1abc9c;
+    padding: 2rem;
+    color: #fff;
+    padding-right: 20%;
+    padding-left: 6%;
+}
+
+.footer__title {
+    margin-bottom: 1rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__item {
+    margin-bottom: 1rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1rem;
+}
+.footer__author {
+    margin-bottom: 1rem;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* Media Screen */
+@media (min-width: 768px) {
+    .footer__section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__title {
+        margin: 0;
+    }
+
+    .footer__list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer__item {
+        margin: 0 1rem;
+    }
+}

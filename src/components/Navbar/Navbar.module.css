@@ -3,7 +3,7 @@
     background-color: #06D6A0;
     padding: 2rem;
     color: #fff;
-    padding-right: 20%;
+    padding-right: 9%;
     padding-left: 6%;
   }
 
@@ -49,6 +49,10 @@
 
   /* Medium Screen */
   @media (min-width: 768px) {
+    .navbar__container  {
+        padding-right: 20%;
+    }
+
     .navbar__section {
       flex-direction: row;
       justify-content: space-between;
