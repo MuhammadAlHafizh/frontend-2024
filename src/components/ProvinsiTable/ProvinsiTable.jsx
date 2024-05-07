@@ -6,7 +6,7 @@ function ProvinsiTable(props) {
     return (
         <div className={styles.provinsi__container}>
             <section className={styles.provinsi__section}>
-                <h2 className={styles.provinsi__title}>Data Provinsi</h2>
+                <h2 className={styles.provinsi__title}>Provinsi</h2>
                 <h3 className={styles.provinsi__subtitle}>Data Covid Berdasarkan Provinsi di Indonesia</h3>
                 <table className={styles.provinsi__table}>
                     <thead>

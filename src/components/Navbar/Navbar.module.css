@@ -14,7 +14,6 @@
 
   .navbar__brand {
     font-size: 2.4rem;
-    font-family: 'Poppins';
     font-weight: 500;
     margin-bottom:0;
     cursor: pointer;
@@ -43,7 +42,6 @@
   .navbar__item {
     margin-bottom: 1rem;
     cursor: pointer;
-    font-family: 'Poppins';
     font-weight: 400;
   }
 

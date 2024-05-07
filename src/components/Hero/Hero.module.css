@@ -18,7 +18,6 @@
     color: #1abc9c;
     margin-bottom: 1rem;
     font-size: 2.44rem;
-    font-family: 'Poppins';
     font-weight: 500;
 }
 
@@ -26,13 +25,11 @@
     color: #118AB2;
     margin-bottom: 1rem;
     font-size: 1.59rem;
-    font-family: 'Poppins';
     font-weight: 400;
 }
 .hero__description {
     color: #64748b;
     margin-bottom: 1rem;
-    font-family: 'Poppins';
     font-weight: 400;
 }
 .hero__button {
@@ -41,7 +38,6 @@
     border-radius: 10px;
     background-color: #1abc9c;
     color: #fff;
-    font-family: 'Poppins';
     font-weight: 400;
 }
 .hero__image {

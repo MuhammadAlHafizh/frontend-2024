@@ -1,8 +1,7 @@
 .provinsi__container {
-    /* margin: 3rem auto; */
     background-color: #FFFF;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .provinsi__section {
@@ -16,10 +15,12 @@
     color: #06D6A0;
     font-size: 2.44rem;
     margin-top: 1rem;
+    font-weight: 500;
 }
 
 .provinsi__subtitle {
     color: #118AB2;
+    font-weight: 400;
 }
 
 .provinsi__table {

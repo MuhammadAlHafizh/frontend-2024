@@ -5,6 +5,7 @@ import Hero from "../../components/Hero/Hero";
 import Footer from "../../components/Footer/Footer";
 import GelobalSection from "../../components/GelobalSection/GelobalSection";
 import ProvinsiTable from '../../components/ProvinsiTable/ProvinsiTable';
+import FormCovid from "../../components/FormCovid/FormCovid";
 import data from "../../utils/constants/provinces";
 
 function HomePage() {
@@ -15,6 +16,7 @@ function HomePage() {
         <Hero />
         <GelobalSection />
         <ProvinsiTable objProvinsi={objProvinsi} setProvinsi={setProvinsi}/>
+        <FormCovid objProvinsi={objProvinsi} setProvinsi={setProvinsi}/>
         <Footer />
     </div>
   );

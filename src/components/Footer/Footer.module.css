@@ -9,7 +9,6 @@
 
 .footer__title {
     margin-bottom: 1rem;
-    font-family: 'Poppins';
     font-weight: 500;
     font-size: 2rem;
 }
@@ -17,17 +16,17 @@
 .footer__list {
     list-style: none;
     padding: 0;
+    margin-top: 26px;
+    font-weight: 400;
 }
 
 .footer__item {
     margin-bottom: 1rem;
-    font-family: 'Poppins';
     font-weight: 400;
     font-size: 1rem;
 }
 .footer__author {
     margin-bottom: 1rem;
-    font-family: 'Poppins';
     font-weight: 400;
     font-size: 1rem;
 }
