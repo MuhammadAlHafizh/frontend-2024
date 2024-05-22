@@ -1,0 +1,84 @@
+/* Small Screen */
+.container {
+    margin: 1rem;
+}
+
+.form {
+    width: 50px;
+}
+
+.form label {
+
+    font-size: 15px;
+}
+
+.sec_form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form__left {
+    margin-bottom: 1rem;
+}
+
+.form__title {
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 2.0rem;
+}
+
+.form__genre {
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 1.59rem;
+}
+
+
+.form__button {
+    padding: 5px;
+    border: none;
+    width: 36%;
+    border-radius: 6px;
+    background-color: Black;
+    color: white;
+}
+
+.form__image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+    /*
+     * Nothing TODO Here.
+     * We dont change style Hero.
+     */
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1200px;
+        margin: 3rem auto;
+    }
+
+    .sec_form {
+        margin: 0 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .form__left {
+        flex-basis: 40%;
+
+    }
+
+    .form__right {
+        flex-basis: 60%;
+    }
+}

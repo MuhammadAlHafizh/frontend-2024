@@ -4,9 +4,8 @@ import data from "../../utils/constans/data";
 import { nanoid } from "nanoid";
 import { useState } from "react";
 
-
-function Movies() {
-    const [movies, setMovies] = useState(data);
+function Movies(props) {
+    const {movies, setMovies} = props;
 
     function handleClick() {
         const movie = {
