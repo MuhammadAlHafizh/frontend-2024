@@ -4,6 +4,7 @@ import CreateMovie from "./pages/Movie/Create";
 import NowPlayingMovie from "./pages/Movie/NowPlaying";
 import PopularMovie from "./pages/Movie/Popular";
 import TopRatedMovie from "./pages/Movie/TopRated";
+import Detail from './pages/Movie/Detail';
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./GlobalStyle.js";
 import theme from "./utils/constants/theme.js";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/movie/popular" element={<PopularMovie />} />
           <Route path="/movie/now" element={<NowPlayingMovie />} />
           <Route path="/movie/top" element={<TopRatedMovie />} />
+          <Route path="/movie/:id" element={<Detail/>}></Route>
         </Routes>
       </ThemeProvider>
     </>

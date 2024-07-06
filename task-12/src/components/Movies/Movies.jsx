@@ -3,8 +3,7 @@ import Movie from "../Movie/Movie";
 import { useEffect } from "react";
 import axios from "axios";
 
-function Movies(props) {
-    const { movies, setMovies, title = "Latest Movies" } = props;
+function Movies({ movies, setMovies, title = "Latest Movies" }) {
 
     useEffect(() => {
         async function fetchPopularMovies() {
@@ -12,13 +11,15 @@ function Movies(props) {
                 const API_KEY = import.meta.env.VITE_API_KEY;
                 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
                 const response = await axios.get(URL);
-                console.log(response);
                 setMovies(response.data.results);
             } catch (error) {
                 console.error("Error fetching popular movies:", error);
             }
         }
-        fetchPopularMovies();
+
+        if (setMovies) {
+            fetchPopularMovies();
+        }
     }, [setMovies]);
 
     return (
@@ -26,9 +27,9 @@ function Movies(props) {
             <section className={styles.movies}>
                 <h2 className={styles.movies__title}>{title}</h2>
                 <div className={styles.movie__container}>
-                    {movies.map((movie) => {
-                        return <Movie movie={movie} key={movie.id} />;
-                    })}
+                    {movies.map((movie) => (
+                        <Movie movie={movie} key={movie.id} />
+                    ))}
                 </div>
             </section>
         </div>
