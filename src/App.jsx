@@ -1,9 +1,9 @@
-import HomePage from "./pages/Home/Home";
+import ProvinsiPage from "./pages/Provinsi/ProvinsiPage";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <ProvinsiPage />
     </>
   );
 }

@@ -1,11 +1,23 @@
-import styles from './Menu.module.css'
-function Menu(props) {
-    const { onClick,children } = props
-    return (
-        <button onClick={onClick} className={styles.navbar__menu_mobile}>
-           {children}
-        </button>
-    );
+import React from 'react';
+import styled from 'styled-components';
+
+const NavbarMenuMobile = styled.button`
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    display: none;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    display: none;
+  }
+`;
+
+function Menu({ onClick, children }) {
+  return <NavbarMenuMobile onClick={onClick}>{children}</NavbarMenuMobile>;
 }
 
-export default Menu
+export default Menu;

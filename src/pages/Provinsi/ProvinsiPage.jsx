@@ -8,13 +8,13 @@ import ProvinsiTable from '../../components/ProvinsiTable/ProvinsiTable';
 import FormCovid from "../../components/FormCovid/FormCovid";
 import data from "../../utils/constants/provinces";
 
-function HomePage() {
+function ProvinsiPage() {
     const [objProvinsi, setProvinsi] = useState(data.provinces);
   return (
     <div>
         <Navbar/>
         <Hero />
-        <GelobalSection />
+        {/* <GelobalSection /> */}
         <ProvinsiTable objProvinsi={objProvinsi} setProvinsi={setProvinsi}/>
         <FormCovid objProvinsi={objProvinsi} setProvinsi={setProvinsi}/>
         <Footer />
@@ -22,4 +22,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default ProvinsiPage;
