@@ -138,7 +138,9 @@ function Navbar() {
                 <NavbarItem>
                     <Link to="/covid/provinsi" style={{ textDecoration: 'none', color : '#FFFF' }}>Provinsi</Link>
                 </NavbarItem>
-                <NavbarItem>About</NavbarItem>
+                <NavbarItem>
+                    <Link to="/covid/about" style={{ textDecoration: 'none', color : '#FFFF' }}>About</Link>
+                </NavbarItem>
               </NavbarList>
             </NavbarRight>
           </div>
