@@ -9,7 +9,7 @@ const DataContainer = styled.div`
   margin-top: ${({ theme }) => theme.spacing.medium};
   margin-bottom: ${({ theme }) => theme.spacing.medium};
   width: 100%;
-  height: 391px;
+  height: auto;
   transition: transform 0.2s ease-in-out;
   text-align: left;
 
@@ -24,7 +24,7 @@ const DataContainer = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     margin-left: ${({ theme }) => theme.spacing.large};
     width: 384px;
-    height: 300px;
+    height: auto;
   }
 `;
 

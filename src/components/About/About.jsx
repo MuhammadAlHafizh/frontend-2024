@@ -6,8 +6,8 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 62vh;
-  background-color: white;
-  color: black;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: #000000;
   text-align: center;
 `;
 
