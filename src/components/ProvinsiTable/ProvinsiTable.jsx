@@ -73,7 +73,7 @@ function ProvinsiTable({ objProvinsi }) {
         <ProvinsiTitle>Provinsi</ProvinsiTitle>
         <ProvinsiSubtitle>Data Covid Berdasarkan Provinsi</ProvinsiSubtitle>
         <ProvinsiTableContainer>
-          <ProvinsiTableStyled>
+          <ProvinsiTableStyled border={1}>
             <thead>
               <tr>
                 <th>No</th>

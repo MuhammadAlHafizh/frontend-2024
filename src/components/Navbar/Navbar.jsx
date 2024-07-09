@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 import Menu from './Menu/Menu';
 
 const NavbarContainer = styled.div`
@@ -130,9 +131,13 @@ function Navbar() {
           <div className={isShowMobile ? undefined : 'navbar__right_hide'}>
             <NavbarRight as={isShowMobile ? 'div' : NavbarRightHide}>
               <NavbarList>
-                <NavbarItem>Global</NavbarItem>
+                <NavbarItem>
+                    <Link to="/" style={{ textDecoration: 'none', color : '#FFFF' }}>Global</Link>
+                </NavbarItem>
                 <NavbarItem>Indonesia</NavbarItem>
-                <NavbarItem>Provinsi</NavbarItem>
+                <NavbarItem>
+                    <Link to="/covid/provinsi" style={{ textDecoration: 'none', color : '#FFFF' }}>Provinsi</Link>
+                </NavbarItem>
                 <NavbarItem>About</NavbarItem>
               </NavbarList>
             </NavbarRight>

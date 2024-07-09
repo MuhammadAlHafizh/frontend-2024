@@ -20,21 +20,22 @@ const DataContainer = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     margin-left: ${({ theme }) => theme.spacing.large};
-    width: 300px;
+    width: 384px;
     height: 230px;
   }
 `;
 
 const DataStatus = styled.h3`
   margin-top: ${({ theme }) => theme.spacing.medium};
-  font-size: ${({ theme }) => theme.fontSizes.large};
+  margin-bottom: ${({ theme }) => theme.spacing.medium};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: 500;
 `;
 
 const DataJumlah = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.medium};
+  font-size: ${({ theme }) => theme.fontSizes.large};
   text-align: center;
   margin-top: -0.5em;
   font-family: ${({ theme }) => theme.fonts.body};
@@ -45,12 +46,15 @@ const DataJumlah = styled.p`
 function Data(props) {
   const { obj } = props;
   let color = '';
-  if (obj.status === 'Positif') {
-    color = '#06D6A0';
-  } else if (obj.status === 'Sembuh') {
+  if (obj.status === 'recovered') {
+      color = '#06D6A0';
+      obj.status  = 'Recovered';
+  } else if (obj.status === 'confirmed') {
     color = '#118AB2';
-  } else if (obj.status === 'Meninggal') {
-    color = '#EF476F';
+    obj.status  = 'Confirmed';
+  } else if (obj.status === 'death') {
+      color = '#EF476F';
+      obj.status  = 'Death';
   }
 
   return (

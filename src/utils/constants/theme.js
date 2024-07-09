@@ -23,7 +23,7 @@ const theme = {
       small: '0.5rem',
       medium: '1rem',
       large: '2rem',
-      xlarge: '8rem',
+      xlarge: '4rem',
     },
     breakpoints: {
       sm: '576px',

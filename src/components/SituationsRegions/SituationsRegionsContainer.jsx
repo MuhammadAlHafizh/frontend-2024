@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Data from './Data/Data';
 import axios from 'axios';
 
-const GelobalSectionContainer = styled.div`
+const SituationsRegionsContainer = styled.div`
   text-align: center;
   padding: ${({ theme }) => theme.spacing.xlarge} ${({ theme }) => theme.spacing.large};
   min-width: 100%;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.white};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     max-width: 1200px;
@@ -19,26 +19,26 @@ const GelobalSectionContainer = styled.div`
   }
 `;
 
-const GelobalSectionSection = styled.section`
+const SituationsRegionsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const GelobalSectionTitle = styled.h2`
+const SituationsRegionsTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.large};
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 500;
 `;
 
-const GelobalSectionDescription = styled.h4`
+const SituationsRegionsDescription = styled.h4`
   margin-bottom: ${({ theme }) => theme.spacing.medium};
   font-size: ${({ theme }) => theme.fontSizes.medium};
   color: ${({ theme }) => theme.colors.secondary};
   font-weight: 400;
 `;
 
-const GelobalSectionBox = styled.div`
+const SituationsRegionsBox = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@ const GelobalSectionBox = styled.div`
   }
 `;
 
-function GlobalSection({ situation }) {
+function SituationsRegions({ situation }) {
   const [title, setTitle] = useState('');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -62,7 +62,8 @@ function GlobalSection({ situation }) {
           ? 'https://covid-fe-2023.vercel.app/api/indonesia.json'
           : 'https://covid-fe-2023.vercel.app/api/global.json';
         const response = await axios.get(endpoint);
-        setData(situation === 'indonesia' ? response.data.indonesia : response.data.global);
+        console.log(response.data);
+        setData(response.data.regions); // Assuming response.data.regions contains the regions data
       } catch (error) {
         setError(error);
       } finally {
@@ -77,20 +78,20 @@ function GlobalSection({ situation }) {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <GelobalSectionContainer>
-      <GelobalSectionSection>
-        <GelobalSectionTitle>{title}</GelobalSectionTitle>
-        <GelobalSectionDescription>
+    <SituationsRegionsContainer>
+      <SituationsRegionsSection>
+        <SituationsRegionsTitle>{title}</SituationsRegionsTitle>
+        <SituationsRegionsDescription>
           Data Covid Berdasarkan {situation === 'indonesia' ? 'Indonesia' : 'Global'}
-        </GelobalSectionDescription>
-        <GelobalSectionBox>
-          {data.map((obj) => (
-            <Data obj={obj} key={obj.status} />
+        </SituationsRegionsDescription>
+        <SituationsRegionsBox>
+          {data.map((obj, index) => (
+            <Data obj={obj} key={`${obj.name}-${index}`} />
           ))}
-        </GelobalSectionBox>
-      </GelobalSectionSection>
-    </GelobalSectionContainer>
+        </SituationsRegionsBox>
+      </SituationsRegionsSection>
+    </SituationsRegionsContainer>
   );
 }
 
-export default GlobalSection;
+export default SituationsRegions;
