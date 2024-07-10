@@ -4,6 +4,7 @@ import { Route,Routes } from 'react-router-dom'
 import theme from "./utils/constants/theme";
 import store from './store';
 import HomePage from './pages/Home/HomePage';
+import IndonesiaPage from './pages/Indonesia/IndonesiaPage';
 import ProvinsiPage from "./pages/Provinsi/ProvinsiPage";
 import AboutPage from './pages/About/AboutPage';
 
@@ -14,6 +15,7 @@ function App() {
             <ThemeProvider theme={theme} store={store}>
                 <Routes>
                     <Route path='/' element={ <HomePage /> }></Route>
+                    <Route path='/covid/indonesia' element={ <IndonesiaPage />}></Route>
                     <Route path='/covid/provinsi' element={ <ProvinsiPage /> }></Route>
                     <Route path='/covid/about' element={ <AboutPage /> }></Route>
                 </Routes>

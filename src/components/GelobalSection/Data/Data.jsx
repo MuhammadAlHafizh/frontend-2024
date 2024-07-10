@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const DataContainer = styled.div`
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  padding: ${({ theme }) => theme.spacing.large};
+  padding: 3rem;
   margin-top: ${({ theme }) => theme.spacing.large};
   width: 100%;
   height: auto;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.div`
   background-color: #1abc9c;
@@ -67,10 +68,18 @@ function Footer() {
         </div>
         <div>
           <FooterList>
-            <FooterItem>Global</FooterItem>
-            <FooterItem>Indonesia</FooterItem>
-            <FooterItem>Provinsi</FooterItem>
-            <FooterItem>About</FooterItem>
+            <FooterItem>
+                <Link to="/" style={{ textDecoration: 'none', color : '#FFFF' }}>Global</Link>
+            </FooterItem>
+            <FooterItem>
+                <Link to="/covid/indonesia" style={{ textDecoration: 'none', color : '#FFFF' }}>Indonesia</Link>
+            </FooterItem>
+            <FooterItem>
+                <Link to="/covid/provinsi" style={{ textDecoration: 'none', color : '#FFFF' }}>Provinsi</Link>
+            </FooterItem>
+            <FooterItem>
+                <Link to="/covid/about" style={{ textDecoration: 'none', color : '#FFFF' }}>About</Link>
+            </FooterItem>
           </FooterList>
         </div>
       </FooterSection>

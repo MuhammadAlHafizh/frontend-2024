@@ -134,7 +134,9 @@ function Navbar() {
                 <NavbarItem>
                     <Link to="/" style={{ textDecoration: 'none', color : '#FFFF' }}>Global</Link>
                 </NavbarItem>
-                <NavbarItem>Indonesia</NavbarItem>
+                <NavbarItem>
+                    <Link to="/covid/indonesia" style={{ textDecoration: 'none', color : '#FFFF' }}>Indonesia</Link>
+                </NavbarItem>
                 <NavbarItem>
                     <Link to="/covid/provinsi" style={{ textDecoration: 'none', color : '#FFFF' }}>Provinsi</Link>
                 </NavbarItem>
